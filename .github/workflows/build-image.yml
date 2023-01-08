@@ -31,13 +31,14 @@ jobs:
       #     username: ${{ github.repository_owner }}
       #     password: ${{ secrets.GITHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push PHP v8.2
         uses: docker/build-push-action@v3
         with:
           context: ./8.2/
           # platforms: linux/amd64,linux/arm64
           platforms: linux/amd64
           push: true
-          tags: |
-            riipandi/minisail:8.2
-            ghcr.io/riipandi/minisail:8.2
+          # tags: |
+          #   riipandi/minisail:8.2
+          #   ghcr.io/riipandi/minisail:8.2
+          tags: riipandi/minisail:8.2
